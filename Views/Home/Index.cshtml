@@ -10,7 +10,8 @@
         <tbody>
             @foreach (Post post in Model)
             {
-                <tr class="clickable-row" data-id="@post.PostId" style="cursor: pointer;">
+                <tr onclick="location.href='@Url.Action("Article", "Home", new { id = post.PostId })'"
+                class="clickable-row" style="cursor: pointer;">
                 <td align="left">@post.Title</td>
                 <td align="right" style="color:gray">@post.Date.ToLongDateString()</td>
             </tr>    

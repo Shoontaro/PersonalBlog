@@ -14,7 +14,7 @@ namespace PersonalBlog.Controllers
 
         public IActionResult Article(string id)
         {
-            return PartialView();
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
