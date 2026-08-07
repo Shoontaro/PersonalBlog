@@ -1,8 +1,20 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<PersonalBlog.Models.Post>
+@{
+    ViewData["Title"] = "Blog";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">My personal blog</h1>
+
+    <table style=" margin-left: auto; margin-right: auto;">
+        <tbody>
+            @foreach (Post post in Model)
+            {
+            <tr>
+                <td align="left">@post.Title</td>
+                <td align="right" style="color:gray">@post.Date.ToLongDateString()</td>
+            </tr>    
+            }
+        </tbody>
+    </table>
 </div>

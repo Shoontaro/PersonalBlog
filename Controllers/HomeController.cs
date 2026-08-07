@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PersonalBlog.Models;
 using System.Diagnostics;
+using PersonalBlog.Models;
 
 namespace PersonalBlog.Controllers
 {
@@ -8,7 +9,7 @@ namespace PersonalBlog.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(Post.Seeds());
         }
 
         public IActionResult HomePage()
