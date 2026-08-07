@@ -14,6 +14,7 @@ namespace PersonalBlog.Models
         { 
             Title = title; Body = body; Date = DateTime.Now;
         }
+
         public Post(string title, string body, DateTime date):this(title, body) {
             Date = date;
         }
@@ -21,10 +22,10 @@ namespace PersonalBlog.Models
         public static List<Post> Seeds() 
         {
             return new List<Post>() {
-                new Post("First", ""),
-                new Post("Second", ""),
-                new Post("Third", ""),
-                new Post("Fourth", "")
+                new Post("First", ""){ PostId = 1},
+                new Post("Second", ""){ PostId = 2},
+                new Post("Third", ""){ PostId = 3},
+                new Post("Fourth", ""){ PostId = 4}
             };
         }
     }

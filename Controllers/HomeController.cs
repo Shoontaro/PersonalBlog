@@ -12,7 +12,7 @@ namespace PersonalBlog.Controllers
             return View(Post.Seeds());
         }
 
-        public IActionResult HomePage()
+        public IActionResult Article(string id)
         {
             return PartialView();
         }

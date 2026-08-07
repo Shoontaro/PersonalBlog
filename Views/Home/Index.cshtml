@@ -6,11 +6,11 @@
 <div class="text-center">
     <h1 class="display-4">My personal blog</h1>
 
-    <table style=" margin-left: auto; margin-right: auto;">
+    <table>
         <tbody>
             @foreach (Post post in Model)
             {
-            <tr>
+                <tr class="clickable-row" data-id="@post.PostId" style="cursor: pointer;">
                 <td align="left">@post.Title</td>
                 <td align="right" style="color:gray">@post.Date.ToLongDateString()</td>
             </tr>    
