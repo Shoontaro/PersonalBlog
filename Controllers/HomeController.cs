@@ -1,0 +1,25 @@
+using Microsoft.AspNetCore.Mvc;
+using PersonalBlog.Models;
+using System.Diagnostics;
+
+namespace PersonalBlog.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult HomePage()
+        {
+            return PartialView();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
