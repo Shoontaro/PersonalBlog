@@ -12,9 +12,10 @@ namespace PersonalBlog.Controllers
             return View(Post.Seeds());
         }
 
+        [HttpGet]
         public IActionResult Article(string id)
         {
-            return View();
+            return View(Post.GetPost(id));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

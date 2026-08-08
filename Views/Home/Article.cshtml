@@ -1,0 +1,12 @@
+﻿@model Post
+
+@{
+    ViewData["Title"] = "Article";
+}
+
+<div class="text-center">
+    <label>
+        @Model.Title
+    </label>
+    <p style="color: gray">@Model.Date.ToLongDateString()</p>
+</div>
